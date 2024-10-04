@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+header {
+    background-color: white;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+nav ul li {
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #6a00ff;
+}
+
+.hero p {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+form input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #6a00ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero-image img {
+    border-radius: 10px;
+    width: 400px;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: white;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h2 {
+    font-size: 48px;
+    color: #6a00ff;
+}
+
+.stat-item p {
+    font-size: 18px;
+    color: #666;
+}
