@@ -1,0 +1,80 @@
+section{
+    background-color: #f4f4f4;
+    display: flex;
+    /* border: 1px red solid; */
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    
+    }
+    .img{
+      /* border: 1px rgb(0, 255, 179); */
+      width: 50%;
+      
+      background-image: url(../Asset/man.png);
+    
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .Font{
+      display: inline;
+    /* border: 1px blue solid; */
+    width: 50%;
+    height: 600px;
+    padding: 50px;
+  
+    }
+    .purple-text{
+      font-size: 60px;
+      color: rgb(103, 0, 193);
+    }
+    .Building{
+      font-weight: 700;
+      font-size: 70px;
+    }
+    .form{
+      display: inline-flex;
+            height: 50px;
+            align-items: flex-end;
+            margin: 50px;
+    }
+    .btn{
+      height: 50px;
+            width: 500px;
+            background-color: rgb(72, 1, 251);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-left: 30px;
+    }
+    #exampleFormControlInput1 {
+            height: 50px;
+        }
+        
+        #navbarSupportedContent{
+          text-align: center;
+          /* border: 1px black solid; */
+          margin-left: 350px;
+          font-size: 20px;
+        }
+        .link{
+          /* border: 1px black solid; */
+          text-align: left;
+          display: inline;
+          margin-right: 50px;
+        }
+        .footer {
+            text-align: center;
+            background-color: rgba(10, 0, 51, 0.889);
+            color: white;
+            padding: 10px;
+           
+        }
+
+        #fot {
+            font-size: medium;
+            width: 30px;
+            margin: 10px;
+        }
+        
