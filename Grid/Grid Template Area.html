@@ -9,19 +9,45 @@
             display: grid;
             grid-template-columns: auto auto auto auto;
             grid-template-rows: 100px 100px 100px;
+            grid-template-areas: 'ABC ABC X Y''Myself Myself P P''Myself Myself Q R';
         }
-        
+        section>div{
+            border: 1px solid;
+            background-color: aqua;
+            height: 100%;
+        }
+        #Div01{
+            grid-area: ABC;
+        }
+        #Div02{
+            
+        }
+        #Div03{
+            
+        }
+        #Div04{
+            
+        }
+        #Div05{
+            
+        }
+        #Div06{
+            
+        }
+        #Div07{
+            
+        }
     </style>
 </head>
 <body>
     <section>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
+        <div id="Div01">1</div>
+        <div id="Div02">2</div>
+        <div id="Div03">3</div>
+        <div id="Div04">4</div>
+        <div id="Div05">5</div>
+        <div id="Div06">6</div>
+        <div id="Div07">7</div>
     </section>
 </body>
 </html>
