@@ -9,3 +9,4 @@ console.log(foodItems);
 let deleteditem = foodItems.pop();
 console.log(foodItems);
 console.log("deleted",deleteditem);
+console.log(foodItems);
