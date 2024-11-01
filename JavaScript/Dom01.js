@@ -17,3 +17,4 @@ console.dir(element);
 //all querry  selector
 let allelement = document.querySelectorAll("h1");
 console.dir(allelement);
+
