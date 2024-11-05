@@ -4,5 +4,5 @@ let div = document.querySelector("div");
 
 div.style.backgroundColor = "green";
 div.innerText = "Patil";
-//div.style.fontSize = "26px";
+div.style.fontSize = "26px";
 
