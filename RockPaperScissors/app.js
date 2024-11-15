@@ -47,7 +47,6 @@ const playGame = (userChoice) => {
         showWinner(userWin, userChoice, compChoice);
     }
  };
-
  // Collect Choice
 choices.forEach((choice) => {
     choice.addEventListener("click", () => {
