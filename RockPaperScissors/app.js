@@ -27,7 +27,6 @@ const showWinner = (userWin, userChoice, compChoice) => {
         msg.innerText = `You Lost! ${compChoice} beats your ${userChoice}`;
          msg.style.backgroundColor = "red"
     }
-
 };
 
 // Check User Choice And Computer Choice
