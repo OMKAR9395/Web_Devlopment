@@ -22,7 +22,6 @@ img{
     width: 170px;
     object-fit: cover;
     border-radius: 50%;
-   
 }
 .choices{
     display: flex;
