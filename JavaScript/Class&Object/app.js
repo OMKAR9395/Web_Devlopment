@@ -4,4 +4,5 @@ const student ={
     printmarks: function(){
         console.log("marks =",this.marks);
     },
+    ClassName:"Bcs",
 };
