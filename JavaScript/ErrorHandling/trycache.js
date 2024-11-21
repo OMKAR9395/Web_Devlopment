@@ -9,5 +9,6 @@ try{
 }catch(err){
     console.log(err);
 }
+
 console.log("a+b = ",a+b);
 
