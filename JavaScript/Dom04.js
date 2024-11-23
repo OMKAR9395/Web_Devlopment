@@ -10,7 +10,6 @@ div.after(newBtn);
 
 let newHeading = document.createElement("h1");
 newHeading.innerHTML = "<i>Hi, I  am New!</i>";
-
 document.querySelector("body").prepend(newHeading);
 
 let para = document.querySelector("p");
