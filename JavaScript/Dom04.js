@@ -5,6 +5,7 @@ console.log(newBtn);
 let div = document.querySelector("div");
 div.after(newBtn);
 
+
 // div.before(newBtn);
 // div.prepend(newBtn);
 // div.append(newBtn);
