@@ -1,7 +1,7 @@
 (async function () {
     console.log("Getting Data 1....");
     await getData(1);
-    
+
     console.log("Getting Data 2....");
     await getData(2);
     console.log("Getting Data 3....");
@@ -10,6 +10,7 @@
     await getData(4);
     console.log("Getting Data 5....");
     await getData(5);
+    
     console.log("Getting Data 6....");
     await getData(6);
 })();
