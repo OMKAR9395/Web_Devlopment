@@ -1,6 +1,7 @@
 (async function () {
     console.log("Getting Data 1....");
     await getData(1);
+    
     console.log("Getting Data 2....");
     await getData(2);
     console.log("Getting Data 3....");
