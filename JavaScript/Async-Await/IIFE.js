@@ -4,6 +4,7 @@
 
     console.log("Getting Data 2....");
     await getData(2);
+    
     console.log("Getting Data 3....");
     await getData(3);
     console.log("Getting Data 4....");
