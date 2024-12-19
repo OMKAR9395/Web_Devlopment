@@ -12,3 +12,5 @@ var No = 10;
 console.log(typeof(No));
 
 */
+
+var x = 0;
