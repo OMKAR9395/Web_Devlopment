@@ -13,4 +13,14 @@ console.log(typeof(No));
 
 */
 
-var x = 0;
+function Hello(){
+    let x =20;
+    console.log(x);
+
+    if (true){
+        let y = "Fork Infosystems";
+        console.log(y);
+
+    }
+    console.log(x);
+}
