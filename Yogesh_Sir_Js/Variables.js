@@ -12,6 +12,8 @@ var No = 10;
 console.log(typeof(No));
 
 */
+/*
+Block Scope And Error With Let
 
 function Hello(){
     let x =20;
@@ -22,5 +24,6 @@ function Hello(){
         console.log(y);
 
     }
-    console.log(x);
+    console.log(y);
 }
+*/
