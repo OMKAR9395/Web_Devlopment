@@ -86,6 +86,3 @@ console.log(x);
 // let x = value.slice(1,4);
 // console.log(x);
 
-var arr = [10,20,30,40,50,60];
-const y = arr.toString();
-console.log(y);
