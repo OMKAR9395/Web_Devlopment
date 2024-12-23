@@ -83,6 +83,7 @@ console.log(x);
 //          ArrName.slice(begin,end);
 //          ArrName.slice(1,3)  Not Consider a Last Element
 //          Start With Indexing
+
 // var value = ["Fork","Infosystem","Development","Omkar","Patil","Web"];
 // let x = value.slice(1,4);
 // console.log(x);
