@@ -78,6 +78,7 @@ console.log(x);
 */
 
 //          Slice
+
 //          Not Modify Original Array
 //          ArrName.slice(begin,end);
 //          ArrName.slice(1,3)  Not Consider a Last Element
