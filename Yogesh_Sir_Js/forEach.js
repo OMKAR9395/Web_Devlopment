@@ -37,3 +37,14 @@ numbers.forEach((number, index, array) => {
 });
 
 */
+/*
+
+function printElement(element) {
+  console.log(element);
+}
+
+const fruits = ["apple", "banana", "cherry"];
+fruits.forEach(printElement);
+
+
+*/
