@@ -28,3 +28,12 @@ fruits.forEach((fruit, index) => {
 });
 
 */
+
+/*
+
+const numbers = [1, 2, 3];
+numbers.forEach((number, index, array) => {
+  console.log(`Number: ${number}, Index: ${index}, Array: ${array}`);
+});
+
+*/
