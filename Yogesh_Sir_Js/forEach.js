@@ -62,3 +62,18 @@ Object.keys(obj).forEach((key) => {
   console.log(`${key}: ${obj[key]}`);
 
  */
+
+  //    using object.keys 
+
+  /*
+  
+  const obj = { a: 1, b: 2, c: 3 };
+Object.keys(obj).forEach((key) => {
+  console.log(`${key}: ${obj[key]}`);
+});
+// Output:
+// a: 1
+// b: 2
+// c: 3
+
+  */
