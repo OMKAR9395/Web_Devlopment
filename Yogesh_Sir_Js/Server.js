@@ -5,15 +5,27 @@ const ServerData =[
 ];
 
 function AddData(AddUserData){
-    setTimeout(function(){
-        ServerData.push(AddUserData);
-        console.log("Data Added Successfullt !!!");
-    },3000)
+    return new Promise((resolve,reject)=>{
+        setTimeout(function(){
+
+            ServerData.push(AddUserData);
+            let error = false;
+            if(!error){
+                resolve();
+                console.log("Data Added Successfully !!!");
+            }
+            else{
+                reject("Data Not Added");
+            }
+            
+        },3000)
+    })
+    
 }
 function getData(){
     setTimeout(function(){
-        ServerData.forEach(function(x){
-            let str=x.name;
+        ServerData.forEach(function(element){
+            let str=element.name;
             console.log(str);
         })
     },3000)
