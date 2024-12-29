@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Element</title>
+</head>
+<body>
+    <p id="para">Hello Data</p>
+
+    <p class="Test">Test 01</p>
+    <p class="Test">Test 02</p>
+    <p class="Test">Test 03</p>
+    <p class="Test">Test 04</p>
+
+    <script>
+        var x = document.getElementById("para");
+        x.style.color = "blue";
+
+        var y = document.getElementsByClassName("Test");
+        var Colors = ["black","blue","brown","navy"];
+        for(let i=0;i<y.length;i++){
+            y[i].style.color = Colors[i];
+        }
+
+        console.log(y);
+    </script>
+</body>
+</html>

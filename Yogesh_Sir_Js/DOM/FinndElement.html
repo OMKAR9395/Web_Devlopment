@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding HTML Data</title>
+</head>
+<body>
+    <p class="para">test 01</p>
+    <p class="para">test 02</p>
+    <p class="para">test 03</p>
+    <p class="para">test 04</p>
+    <script>
+        var x = document.getElementsByClassName("para");
+        for(let i=0;i<x.length;i++){
+            document.write(x[i] + "<br>");
+        }
+        var x = document.getElementsByClassName("para");
+        for(let i=0;i<x.length;i++){
+            document.write(x[i].innerHTML + "<br>");
+        }
+    </script>
+</body>
+</html>
