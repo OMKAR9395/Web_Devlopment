@@ -6,6 +6,18 @@
     <title>Child Node</title>
 </head>
 <body>
+    <p id="para01">Test Data 01</p>
+    <p class="Demo">Test Data 02</p>
+    <p class="Demo">Test Data 03</p>
+    <p class="Demo">Test Data 04</p>
+
+    <ul>
+        <li>Product 01</li>
+        <li>Product 02</li>
+        <li>Product 03</li>
+        <li>Product 04</li>
+    </ul>
+
     <script>
         
         var CreatePara = document.createElement("p");
@@ -14,6 +26,17 @@
         CreatePara.appendChild(CreateNewData);
         document.body.appendChild(CreatePara);
 
+        var x = document.body.children;
+        console.log(x);
+
+        let Data = document.querySelector("ul");
+
+        let FirstChild = Data.firstChild;
+        console.log(FirstChild);
+
+        let LastChild = Data.lastChild;
+        console.log(lastChild);
+        
     </script>
 </body>
 </html>
