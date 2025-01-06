@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+
+        .languages {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .languages div {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .languages img {
+            width: 60px;
+            height: 60px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            margin-top: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .contact-form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button.reset {
+            background-color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo.png" alt="Logo">
+            <h1>Resume</h1>
+            <p>Enter Your Name</p>
+        </div>
+
+        <h2>Qualification</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Standard</th>
+                    <th>Education</th>
+                    <th>College</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10th</td>
+                    <td>High School</td>
+                    <td>XYZ School</td>
+                    <td>85%</td>
+                </tr>
+                <tr>
+                    <td>12th</td>
+                    <td>Senior Secondary</td>
+                    <td>ABC School</td>
+                    <td>90%</td>
+                </tr>
+                <tr>
+                    <td>B.Sc</td>
+                    <td>Graduation</td>
+                    <td>DEF College</td>
+                    <td>75%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Programming Languages</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <h2>Known Languages</h2>
+        <div class="languages">
+            <div>
+                <img src="html_logo.png" alt="HTML">
+                <p>HTML</p>
+            </div>
+            <div>
+                <img src="css_logo.png" alt="CSS">
+                <p>CSS</p>
+            </div>
+            <div>
+                <img src="python_logo.png" alt="Python">
+                <p>Python</p>
+            </div>
+            <div>
+                <img src="js_logo.png" alt="JavaScript">
+                <p>JavaScript</p>
+            </div>
+            <div>
+                <img src="csharp_logo.png" alt="C#">
+                <p>C#</p>
+            </div>
+        </div>
+
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName">
+
+            <label for="middleName">Middle Name</label>
+            <input type="text" id="middleName" name="middleName">
+
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName">
+
+            <label for="mobile">Mobile No.</label>
+            <input type="tel" id="mobile" name="mobile">
+
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address">
+
+            <button type="submit">Submit</button>
+            <button type="reset" class="reset">Reset</button>
+        </div>
+    </div>
+</body>
+</html>
