@@ -81,7 +81,6 @@ for(let i=0;i<=strName.length-1;i++)
     console.log(strName[i]);
 }
 
-
 */
 
 //      Upper Case Method Lower Case Method
