@@ -86,6 +86,7 @@ for(let i=0;i<=strName.length-1;i++)
 
 //      Upper Case Method Lower Case Method
 
+
 var strName = "Web Development";
 console.log(strName.toLowerCase());
 console.log(strName.toUpperCase());
