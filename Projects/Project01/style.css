@@ -39,12 +39,17 @@ a{
     background-size: cover;
 }
 .banner-title h1 {
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.8);
     display: inline-block;
     padding: 10px;
     margin: 0;
 }
 .banner-title p.lead {
     color: #fff;
-    background: rgb(231,76,60);
+    background: rgb(231,76,60,0.7);
+    padding: 10px;
+
+}
+.banner-title{
+    padding-top: 5rem;
 }
