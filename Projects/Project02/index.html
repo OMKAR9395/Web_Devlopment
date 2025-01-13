@@ -18,54 +18,103 @@
       body {
         background-color: rgb(2, 40, 101);
         color: white;
-        font-family: 'Poppins',sans-serif;
+        font-family: "Poppins", sans-serif;
       }
-      nav{
+      nav {
         display: flex;
         justify-content: space-around;
         align-items: center;
         height: 80px;
         background-color: rgb(10, 92, 223);
       }
-      nav ul{
+      nav ul {
         display: flex;
         justify-content: center;
-
       }
-      nav ul li{
+      nav ul li {
         list-style: none;
         margin: 0 23px;
       }
-      nav ul li a{
+      nav ul li a {
         text-decoration: none;
         color: white;
       }
-      nav ul li a:hover{
+      nav ul li a:hover {
         color: aqua;
       }
-      .left{
+      main hr {
+        border: 0;
+        background: #9c97f1;
+        height: 1.2px;
+        margin: 40px 84px;
+      }
+      .left {
         font-size: 1.5rem;
       }
-      .firstSection{
+      .firstSection {
         display: flex;
         justify-content: space-around;
-       
+
         align-items: center;
       }
-      .firstSection >div{
+      .firstSection > div {
         width: 47%;
         font-size: 3rem;
       }
-      .leftSection{
+      .leftSection {
         margin: 83px;
       }
-      .rightSection img{
+      .rightSection img {
         width: 77%;
-    padding: 24px 0px;
-    margin: 37px;
+        padding: 24px 0px;
+        margin: 37px;
       }
-      .purple{
+      .purple {
         color: blueviolet;
+      }
+      .text-gray {
+        color: gray;
+      }
+      #element {
+        color: blueviolet;
+      }
+      .secondSection {
+        max-width: 90vw;
+        margin: auto;
+      }
+      .secondSection h1 {
+        font-size: 2rem;
+      }
+      .secondSection .box {
+        background: white;
+        width: 90vw;
+        height: 2px;
+        margin: 56px 0;
+        display: flex;
+      }
+      .secondSection .vertical {
+        height: 93px;
+        width: 1px;
+        background-color: white;
+        margin: 0 100px;
+      }
+      .image-top {
+        width: 23px;
+        position: relative;
+        top: -32px;
+        left: -9px;
+      }
+      .vertical-title {
+        position: relative;
+        top: 75px;
+        width: 150px;
+      }
+      .vertical-desc {
+        position: relative;
+        top: 86px;
+        color: gray;
+        width: 150px;
+        font-size: 9px;
       }
     </style>
   </head>
@@ -74,27 +123,97 @@
       <nav>
         <div class="left">Omkar's Portfolio</div>
         <div class="right">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/">About</a></li>
-                <li><a href="/">Services</a></li>
-                <li><a href="/">Projects</a></li>
-                <li><a href="/">Contact Me</a></li>
-            </ul>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Services</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="/">Contact Me</a></li>
+          </ul>
         </div>
       </nav>
     </header>
     <main>
-        <section class="firstSection">
-            <div class="leftSection">
-                Hi, My name is <span class="purple">Omkar Mohite</span>
-                <div>and I am a Passionate</div>
-                <div>Web Developer</div>
+      <section class="firstSection">
+        <div class="leftSection">
+          Hi, My name is <span class="purple">Omkar </span>
+          <div>and I am a Passionate</div>
+
+          <span id="element"></span>
+        </div>
+        <div class="rightSection">
+          <img src="Images/developer-with-ai-generated-free-png.webp" alt="" />
+        </div>
+      </section>
+      <hr />
+      <section class="secondSection">
+        <span class="text-gray">What I have done so far</span>
+        <h1>Work Experience</h1>
+        <div class="box">
+          <div class="vertical">
+            <img class="image-top" src="Images/Develeoper.avif" alt="" />
+            <div class="vertical-title">HTML Developer (2020-2021)</div>
+            <div class="vertical-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+              placeat minus fuga, ut consequatur mollitia molestias fugiat iure
+              quas animi?
             </div>
-            <div class="rightSection">
-                <img src="Images/developer-with-ai-generated-free-png.webp" alt="">
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="Images/html.png" alt="" />
+            <div class="vertical-title">Node.js Developer (2021-2023)</div>
+            <div class="vertical-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+              placeat minus fuga, ut consequatur mollitia molestias fugiat iure
+              quas animi?
             </div>
-        </section>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="Images/images.jpeg" alt="" />
+            <div class="vertical-title">HTML Developer (2020-2021)</div>
+            <div class="vertical-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+              placeat minus fuga, ut consequatur mollitia molestias fugiat iure
+              quas animi?
+            </div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="Images/Instagram_icon.png" alt="" />
+            <div class="vertical-title">HTML Developer (2020-2021)</div>
+            <div class="vertical-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+              placeat minus fuga, ut consequatur mollitia molestias fugiat iure
+              quas animi?
+            </div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="Images/wp.jpg" alt="" />
+            <div class="vertical-title">HTML Developer (2020-2021)</div>
+            <div class="vertical-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+              placeat minus fuga, ut consequatur mollitia molestias fugiat iure
+              quas animi?
+            </div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="Images/developer-with-ai-generated-free-png.webp" alt="" />
+            <div class="vertical-title">HTML Developer (2020-2021)</div>
+            <div class="vertical-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+              placeat minus fuga, ut consequatur mollitia molestias fugiat iure
+              quas animi?
+            </div>
+          </div>
+          
+        </div>
+      </section>
     </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web Developer", " Fullstack Developer", ".Net Developer"],
+        typeSpeed: 50,
+      });
+    </script>
   </body>
 </html>
