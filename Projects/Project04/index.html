@@ -29,10 +29,8 @@
             height: 100%;
         }
         .right {
-            background-image: url('./Image/Back.jpg');
             background-size: cover;
             background-position: center;
-            min-height: 400px;
         }
         .Hire {
             background-color: red;
@@ -55,46 +53,9 @@
             max-width: 1200px;
             margin: auto;
         }
-        .services h2, .portfolio h2, .contact h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 2.5rem;
-        }
-        .services .service-items, .portfolio .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .service-item, .gallery-item {
-            background-color: #1a1a1a;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            flex: 1 1 calc(33.333% - 20px);
-            max-width: calc(33.333% - 20px);
-        }
         .gallery-item img {
             width: 100%;
             border-radius: 10px;
-        }
-        .contact form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            max-width: 500px;
-            margin: auto;
-        }
-        .contact form input, .contact form textarea, .contact form button {
-            padding: 10px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 5px;
-        }
-        .contact form button {
-            background-color: #ff007f;
-            color: #fff;
-            cursor: pointer;
         }
         footer {
             text-align: center;
@@ -108,13 +69,6 @@
         @media (max-width: 768px) {
             .left {
                 padding: 30px;
-            }
-            .right {
-                min-height: 300px;
-            }
-            .service-item, .gallery-item {
-                flex: 1 1 calc(100% - 20px);
-                max-width: calc(100% - 20px);
             }
             .Hire {
                 width: 100%;
@@ -150,7 +104,9 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit eum illo ut explicabo incidunt accusantium quibusdam nemo dolores.</p>
                 <button type="button" class="Hire">Hire Me</button>
             </div>
-            <div class="col-md-7 right"></div>
+            <div class="col-md-7 right">
+                <img src="./Image/Back.jpg" class="img-fluid" alt="Background">
+            </div>
         </div>
     </div>
 
@@ -160,16 +116,16 @@
     </header>
 
     <section class="services">
-        <div class="service-items">
-            <div class="service-item">
+        <div class="service-items row">
+            <div class="service-item col-md-4">
                 <h3>User Interface Design</h3>
                 <p>Creating intuitive and beautiful interfaces for users.</p>
             </div>
-            <div class="service-item">
+            <div class="service-item col-md-4">
                 <h3>Mobile App Design</h3>
                 <p>Designing sleek and functional mobile apps.</p>
             </div>
-            <div class="service-item">
+            <div class="service-item col-md-4">
                 <h3>Graphic Design</h3>
                 <p>Crafting visually appealing graphic elements.</p>
             </div>
@@ -178,13 +134,25 @@
 
     <section class="portfolio">
         <h2>Portfolio</h2>
-        <div class="gallery">
-            <div class="gallery-item"><img src="./Image/01.jpeg" alt="Portfolio 1"></div>
-            <div class="gallery-item"><img src="./Image/02.jpeg" alt="Portfolio 2"></div>
-            <div class="gallery-item"><img src="./Image/03.jpeg" alt="Portfolio 3"></div>
-            <div class="gallery-item"><img src="./Image/04.jpeg" alt="Portfolio 4"></div>
-            <div class="gallery-item"><img src="./Image/05.jpeg" alt="Portfolio 5"></div>
-            <div class="gallery-item"><img src="./Image/06.jpeg" alt="Portfolio 6"></div>
+        <div class="gallery row">
+            <div class="gallery-item col-md-4 col-sm-6">
+                <img src="./Image/01.jpeg" class="img-fluid" alt="Portfolio 1">
+            </div>
+            <div class="gallery-item col-md-4 col-sm-6">
+                <img src="./Image/02.jpeg" class="img-fluid" alt="Portfolio 2">
+            </div>
+            <div class="gallery-item col-md-4 col-sm-6">
+                <img src="./Image/03.jpeg" class="img-fluid" alt="Portfolio 3">
+            </div>
+            <div class="gallery-item col-md-4 col-sm-6">
+                <img src="./Image/04.jpeg" class="img-fluid" alt="Portfolio 4">
+            </div>
+            <div class="gallery-item col-md-4 col-sm-6">
+                <img src="./Image/05.jpeg" class="img-fluid" alt="Portfolio 5">
+            </div>
+            <div class="gallery-item col-md-4 col-sm-6">
+                <img src="./Image/06.jpeg" class="img-fluid" alt="Portfolio 6">
+            </div>
         </div>
     </section>
 
@@ -192,10 +160,10 @@
         <h2>Contact Me</h2>
         <p>Feel free to reach out to discuss your project ideas or just say hello.</p>
         <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
+            <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+            <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+            <textarea class="form-control mb-3" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
     </section>
 
