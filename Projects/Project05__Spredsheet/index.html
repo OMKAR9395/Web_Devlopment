@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Spreadsheet</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #4caf50;
+            padding: 10px 20px;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar .menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .menu button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #ffffff;
+            color: #4caf50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .navbar .menu button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .spreadsheet-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .spreadsheet {
+            display: grid;
+            grid-template-columns: 50px repeat(10, 100px);
+            grid-template-rows: 40px repeat(10, 40px);
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+        .spreadsheet div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        .header {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+
+        .cell {
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .cell:focus {
+            outline: 2px solid #4caf50;
+            background-color: #e7f7e7;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">My Spreadsheet</div>
+        <div class="menu">
+            <button onclick="saveToLocalStorage()">Save</button>
+            <button onclick="loadFromLocalStorage()">Load</button>
+            <button onclick="resetSpreadsheet()">Reset</button>
+            <button onclick="exportToJSON()">Export JSON</button>
+            <button onclick="exportToCSV()">Export CSV</button>
+            <input type="file" id="importFile" class="hidden" onchange="importFile(event)">
+            <button onclick="document.getElementById('importFile').click()">Import</button>
+        </div>
+    </div>
+    <div class="spreadsheet-container">
+        <div class="spreadsheet" id="spreadsheet"></div>
+    </div>
+
+    <script>
+        const rows = 10;
+        const cols = 10;
+        let spreadsheetData = Array.from({ length: rows }, () => Array(cols).fill(""));
+
+        const spreadsheet = document.getElementById("spreadsheet");
+
+        function generateSpreadsheet() {
+            spreadsheet.innerHTML = "";
+            spreadsheet.innerHTML += '<div class="header"></div>';
+            for (let col = 0; col < cols; col++) {
+                spreadsheet.innerHTML += `<div class="header">${String.fromCharCode(65 + col)}</div>`;
+            }
+
+            for (let row = 0; row < rows; row++) {
+                spreadsheet.innerHTML += `<div class="header">${row + 1}</div>`;
+                for (let col = 0; col < cols; col++) {
+                    const cellContent = spreadsheetData[row][col] || "";
+                    spreadsheet.innerHTML += `
+                        <div class="cell" contenteditable="true" 
+                             data-row="${row}" data-col="${col}" 
+                             oninput="updateCell(${row}, ${col}, this.textContent)">
+                            ${cellContent}
+                        </div>`;
+                }
+            }
+        }
+
+        function updateCell(row, col, value) {
+            spreadsheetData[row][col] = value.trim();
+        }
+
+        function saveToLocalStorage() {
+            localStorage.setItem("spreadsheetData", JSON.stringify(spreadsheetData));
+            alert("Spreadsheet data saved to LocalStorage!");
+        }
+
+        function loadFromLocalStorage() {
+            const savedData = localStorage.getItem("spreadsheetData");
+            if (savedData) {
+                spreadsheetData = JSON.parse(savedData);
+                generateSpreadsheet();
+                alert("Spreadsheet data loaded from LocalStorage!");
+            } else {
+                alert("No data found in LocalStorage!");
+            }
+        }
+
+        function resetSpreadsheet() {
+            spreadsheetData = Array.from({ length: rows }, () => Array(cols).fill(""));
+            generateSpreadsheet();
+        }
+
+        function exportToJSON() {
+            const dataStr = JSON.stringify(spreadsheetData);
+            const blob = new Blob([dataStr], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "spreadsheet.json";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        function exportToCSV() {
+            const csvContent = spreadsheetData
+                .map(row => row.map(cell => `"${cell}"`).join(","))
+                .join("\n");
+            const blob = new Blob([csvContent], { type: "text/csv" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "spreadsheet.csv";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        function importFile(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const importedData = JSON.parse(e.target.result);
+                    if (Array.isArray(importedData) && importedData.length === rows) {
+                        spreadsheetData = importedData;
+                        generateSpreadsheet();
+                        alert("Spreadsheet data imported successfully!");
+                    } else {
+                        alert("Invalid file format!");
+                    }
+                } catch (error) {
+                    alert("Error reading file: " + error.message);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        generateSpreadsheet();
+    </script>
+</body>
+</html>
