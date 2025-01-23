@@ -198,9 +198,8 @@
             const file = event.target.files[0];
             if (!file) return;
             const reader = new FileReader();
-            
+
             reader.onload = function(e) {
-                
                 try {
                     const importedData = JSON.parse(e.target.result);
                     if (Array.isArray(importedData) && importedData.length === rows) {
