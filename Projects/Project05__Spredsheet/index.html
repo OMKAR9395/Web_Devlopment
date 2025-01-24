@@ -167,7 +167,6 @@
             spreadsheetData = Array.from({ length: rows }, () => Array(cols).fill(""));
             generateSpreadsheet();
         }
-
         function exportToJSON() {
             const dataStr = JSON.stringify(spreadsheetData);
             const blob = new Blob([dataStr], { type: "application/json" });
