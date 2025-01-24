@@ -179,7 +179,6 @@
             a.click();
             document.body.removeChild(a);
         }
-
         function exportToCSV() {
             const csvContent = spreadsheetData
                 .map(row => row.map(cell => `"${cell}"`).join(","))
