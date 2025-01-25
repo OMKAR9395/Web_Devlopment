@@ -151,7 +151,6 @@
             localStorage.setItem("spreadsheetData", JSON.stringify(spreadsheetData));
             alert("Spreadsheet data saved to LocalStorage!");
         }
-
         function loadFromLocalStorage() {
             const savedData = localStorage.getItem("spreadsheetData");
             if (savedData) {
@@ -162,6 +161,7 @@
                 alert("No data found in LocalStorage!");
             }
         }
+        
         function resetSpreadsheet() {
             spreadsheetData = Array.from({ length: rows }, () => Array(cols).fill(""));
             generateSpreadsheet();
