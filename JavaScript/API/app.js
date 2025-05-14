@@ -12,7 +12,6 @@ const getFacts = async () => {
 };
 btn.addEventListener("click",getFacts);
 
-
 /*
 AJAX is Asynchronous JS and XML
 JSON is JavaScript Object Notation
