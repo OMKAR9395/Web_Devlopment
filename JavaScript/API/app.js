@@ -9,10 +9,11 @@ const getFacts = async () => {
 
     console.log(response);
     let data = await response.json();
-    
+
     factPara.innerText = data[0].text;
 };
 btn.addEventListener("click",getFacts);
+
 
 /*
 AJAX is Asynchronous JS and XML
